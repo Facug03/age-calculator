@@ -95,6 +95,11 @@ input::placeholder {
   transform: none;
   height: 10px;
   transform: skew(-6deg);
+  max-width: 70px;
+
+  @media (min-width: 400px) {
+    max-width: 100px;
+  }
 }
 
 .errorBorder {
