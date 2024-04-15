@@ -149,8 +149,6 @@ if (inputDay && inputMonth && inputYear) {
       return
     }
 
-    console.log('xd')
-
     const birth = new Date(inputYearValue, inputMonthValue - 1, inputDayValue)
     const currentDate = new Date()
 
