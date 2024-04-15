@@ -121,7 +121,14 @@ if (inputDay && inputMonth && inputYear) {
 
     if (!userYears || !userMonths || !userDays) return
 
-    if (inputDayValue <= 0 || inputMonthValue <= 0 || inputYearValue <= 0) {
+    if (
+      inputDayValue <= 0 ||
+      inputMonthValue <= 0 ||
+      inputYearValue <= 0 ||
+      isNaN(inputDayValue) ||
+      isNaN(inputMonthValue) ||
+      isNaN(inputYearValue)
+    ) {
       userYears.innerText = '- -'
       userMonths.innerText = '- -'
       userDays.innerText = '- -'
@@ -141,6 +148,8 @@ if (inputDay && inputMonth && inputYear) {
 
       return
     }
+
+    console.log('xd')
 
     const birth = new Date(inputYearValue, inputMonthValue - 1, inputDayValue)
     const currentDate = new Date()
