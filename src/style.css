@@ -32,6 +32,7 @@ body {
   display: flex;
   place-items: center;
   height: 100vh;
+  padding: 0px 8px;
 }
 
 .main {
@@ -62,15 +63,20 @@ label {
 
 input {
   font-family: Poppins;
-  padding: 0rem 16px;
+  padding: 0rem 8px;
   height: 40px;
-  width: 70px;
+  width: 50px;
   border-radius: 4px;
   outline: none;
   border: 1px solid #dcdcdc;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 700;
+
+  @media (min-width: 400px) {
+    width: 70px;
+    padding: 0rem 16px;
+  }
 }
 
 input::placeholder {
@@ -115,9 +121,13 @@ span {
 }
 
 p {
-  font-size: 52px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 1;
   transform: skew(-8deg);
   margin: 0px;
+
+  @media (min-width: 400px) {
+    font-size: 52px;
+  }
 }
